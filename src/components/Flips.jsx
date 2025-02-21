@@ -9,8 +9,9 @@ const Flip = (props) => {
   const [flipState, setFlipState] = useState(false);
 
   const flipHandler = () => {
+    
     setFlipState((prev) => !prev);
-    onChange(id);
+    onChange(id,name);
   };
 
   return (

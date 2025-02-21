@@ -7,17 +7,17 @@ function App() {
   const [flipArray, setFlipArray] = useState(flipObj);
   const [shuffle, setShuffle] = useState(false);
 
-  useEffect(() => {
-    setFlipArray((prev) => {
-      return shuffleArray(prev);
-    });
-  }, [shuffle]);
+  // useEffect(() => {
+  //   setFlipArray((prev) => {
+  //     return shuffleArray(prev);
+  //   });
+  // }, [shuffle]);
 
   const shuffleHandler = useCallback(() => {
     setShuffle((prev) => !prev);
   }, []);
 
-  const selectHandler = (id) => {
+  const selectHandler = (id, name) => {
     setFlipArray((prev) => {
       // Use map and return the new updated array directly
       const newState = prev.map((obj) => {
@@ -30,15 +30,20 @@ function App() {
         return obj; // No need to spread if no changes
       });
 
-      const selectedArray = newState.filter((obj) => obj.selected);
+      let c = 0;
+      const update = newState.map((obj) => {
+        if (obj.name === name && obj.selected) {
+          c += 1;
+          return {
+            ...obj,
+            selected: true, // Toggle selected state
+          };
+        }
+        return { ...obj, selected: false }; // No need to spread if no changes
+      });
 
-      
-      
-
-      
-
-      console.log("Updated FlipArray:", selectedArray);
-      return newState;
+      console.log("Updated FlipArray:", update);
+      return update;
     });
   };
 
