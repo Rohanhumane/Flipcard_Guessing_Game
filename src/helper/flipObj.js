@@ -6,19 +6,19 @@ import fox from "../assets/images/fox.png";
 import dear from "../assets/images/dear.jpg";
 
 export const flipObj = [
-  { img: lion, label: "Lion", selected: false, id: "flip1" },
-  { img: panda, label: "Panda", selected: false, id: "flip2" },
-  { img: bear, label: "Bear", selected: false, id: "flip3" },
-  { img: fox, label: "Fox", selected: false, id: "flip4" },
-  { img: cat, label: "Cat", selected: false, id: "flip5" },
-  { img: dear, label: "Dear", selected: false, id: "flip6" },
+  { img: lion, label: "Lion", isFlip: false, id: "flip1", cursor: true },
+  { img: panda, label: "Panda", isFlip: false, id: "flip2", cursor: true },
+  { img: bear, label: "Bear", isFlip: false, id: "flip3", cursor: true },
+  { img: fox, label: "Fox", isFlip: false, id: "flip4", cursor: true },
+  { img: cat, label: "Cat", isFlip: false, id: "flip5", cursor: true },
+  { img: dear, label: "Dear", isFlip: false, id: "flip6", cursor: true },
 
-  { img: lion, label: "Lion", selected: false, id: "flip7" },
-  { img: panda, label: "Panda", selected: false, id: "flip8" },
-  { img: bear, label: "Bear", selected: false, id: "flip9" },
-  { img: fox, label: "Fox", selected: false, id: "flip10" },
-  { img: cat, label: "Cat", selected: false, id: "flip11" },
-  { img: dear, label: "Dear", selected: false, id: "flip12" },
+  { img: lion, label: "Lion", isFlip: false, id: "flip7", cursor: true },
+  { img: panda, label: "Panda", isFlip: false, id: "flip8", cursor: true },
+  { img: bear, label: "Bear", isFlip: false, id: "flip9", cursor: true },
+  { img: fox, label: "Fox", isFlip: false, id: "flip10", cursor: true },
+  { img: cat, label: "Cat", isFlip: false, id: "flip11", cursor: true },
+  { img: dear, label: "Dear", isFlip: false, id: "flip12", cursor: true },
 ];
 
 export const shuffleArray = (array) => {

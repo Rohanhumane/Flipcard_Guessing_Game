@@ -4,22 +4,22 @@ import { useState } from "react";
 
 const Flip = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { img: flipImg, name, onChange, id } = props;
+  const { img: flipImg, name, onChange, id, isFlip, cursor } = props;
 
   const [flipState, setFlipState] = useState(false);
 
   const flipHandler = () => {
-    
-    setFlipState((prev) => !prev);
-    onChange(id,name);
+    setFlipState(true);
+    onChange(id, name);
   };
 
   return (
     <div
       className={`${classes.flipContaniner} ${
-        flipState ? classes.flipped : ""
+        flipState && isFlip ? classes.flipped : ""
       }`}
-      onClick={flipHandler}
+      style={{ cursor: cursor ? "pointer" : "default" }}
+      onClick={cursor ? flipHandler : undefined}
       key={id}
     >
       <div className={classes.frontFlip}>
