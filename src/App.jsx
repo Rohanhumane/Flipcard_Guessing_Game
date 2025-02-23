@@ -81,7 +81,6 @@ function App() {
       }, 0);
 
       if (count > flipArray.length - 1) {
-        console.log("rohan")
         await new Promise((resolve) => setTimeout(resolve, 1000)); // ✅ Proper await
         setGameOver(true);
       }
@@ -108,7 +107,7 @@ function App() {
     <>
       <Modal open={gameOver} onClose={closeModalHandler}>
         <div className="modal-actions">
-          <h2>Game Over</h2>
+          <h2>Good Job Winner</h2>
           <button className="closeButton" onClick={closeModalHandler}>
             Restart
           </button>
